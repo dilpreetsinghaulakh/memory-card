@@ -1,11 +1,12 @@
 import Card from "./Card";
+import "./styles/gameWrapper.css";
 
 export default function GameWrapper() {
   return (
-    <main className="main-content">
-      <div className="background">
-        <div className="sun"></div>
-        <div className="ground"></div>
+    <main className="game-main-content">
+      <div className="game-wrapper-background">
+        <div className="game-wrapper-sun"></div>
+        <div className="game-wrapper-ground"></div>
       </div>
       <Card
         image="https://unsplash.com/photos/OB6cORrtyjo/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjV8fGUzNnxlbnwwfHx8fDE3MDQ4MjAyNjd8MA&force=true"

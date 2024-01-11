@@ -1,0 +1,49 @@
+.game-main-content {
+  width: calc(100% - 4rem);
+  height: calc(100dvh - 10.125rem);
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+
+.game-wrapper-background {
+  z-index: -1;
+  position: absolute;
+  background-color: #d2ecff; /* OG #80C27F */
+  height: 100%;
+  width: 100%;
+  /* inset: 0; */
+  display: flex;
+  flex-direction: column;
+}
+
+.game-wrapper-background > .game-wrapper-sun {
+  background-color: #ffd700;
+  height: 8rem;
+  width: 8rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border-radius: 1000px;
+}
+
+.game-wrapper-background > .game-wrapper-ground {
+  background-color: #80c27f;
+  height: 40%;
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .game-wrapper-background {
+    background-color: #000c14;
+  }
+
+  .game-wrapper-background > .game-wrapper-sun {
+    background-color: #dccb7f;
+  }
+
+  .game-wrapper-background > .game-wrapper-ground {
+    background-color: #234123;
+  }
+}
