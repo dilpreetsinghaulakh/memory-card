@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/alumni-sans": "^5.0.19",
+    "@fontsource/alumni-sans-collegiate-one": "^5.0.18",
     "@fontsource/bangers": "^5.0.18",
     "@fontsource/syncopate": "^5.0.18",
     "react": "^18.2.0",

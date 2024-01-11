@@ -33,15 +33,18 @@ header > a > img {
   width: calc(100% - 4rem);
   height: calc(100dvh - 10.125rem);
   margin: 2rem auto;
-
+  position: relative;
   border-radius: 5rem;
   overflow: hidden;
 }
 
 .background {
+  z-index: -1;
+  position: absolute;
   background-color: #d2ecff; /* OG #80C27F */
   height: 100%;
   width: 100%;
+  /* inset: 0; */
   display: flex;
   flex-direction: column;
 }
@@ -60,6 +63,41 @@ header > a > img {
   height: 40%;
   width: 100%;
   margin-top: auto;
+}
+
+.card{
+  aspect-ratio: 2/3;
+  height: 300px;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  position: relative;
+}
+
+.card > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.card > p{
+  margin: 0.5rem 0;
+  /* font-family: 'Alumni Sans Collegiate One', sans-serif; */
+  font-family: 'Alumni Sans Variable', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  -webkit-text-stroke-width: 1px; 
+  -webkit-text-stroke-color: #000; 
+  width: 100%;
+  margin-inline: auto;
+  position: absolute;
 }
 
 @media (prefers-color-scheme: dark) {
