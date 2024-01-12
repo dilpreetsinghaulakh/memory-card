@@ -1,7 +1,7 @@
 export const carImageData = [
   { "Porsche 911 GT3 RS": "OB6cORrtyjo" },
   { "Porsche Cayenne": "0s_5oI3j0zE" },
-  { "BMW E36": "8XNw9yj4JUk" },
+  { "BMW E36": "OB6cORrtyjo" },
   { "BMW M5": "PmrnsF0UADs" },
   { "BMW M3": "cQHx11ku1Dk" },
   { "Mercedes AMG Gt63s": "OIJaw_ZKea4" },
@@ -16,7 +16,7 @@ export const carImageData = [
   { "Toyota Supra MK4": "oMcGGGFM5J0" },
   { "Toyota Supra MK5": "s1TOxaRnRmY" },
   { "Toyota GR86": "srnb0mnxfxI" },
-  { "Toyota AE86": "8XNw9yj4JUk" },
+  { "Toyota AE86": "6KDd9d_AT00" },
   { "Ford Mustang": "c7Gay8ttJS0" },
   { "Ford GT": "WTAHNvndZcA" },
   { "Chevrolet Camaro": "phiAzHp5Nuo" },
