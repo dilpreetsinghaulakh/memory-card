@@ -1,5 +1,10 @@
 import Card from "./Card";
 import "./styles/gameWrapper.css";
+import gameLogic from "../api/gameLogic";
+import { carImageData } from "../api/imageData";
+import getImages from "../api/getImages";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function GameWrapper() {
   return (
@@ -8,16 +13,31 @@ export default function GameWrapper() {
         <div className="game-wrapper-sun"></div>
         <div className="game-wrapper-ground"></div>
       </div>
-      <Card
-        image="https://unsplash.com/photos/OB6cORrtyjo/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjV8fGUzNnxlbnwwfHx8fDE3MDQ4MjAyNjd8MA&force=true"
-        // image="https://unsplash.com/photos/8mAPS9YCE6U/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8ZTM2fGVufDB8fHx8MTcwNDgxNzYyM3ww&force=true"
-        name="E36 M3 BMW"
-      />
+      <div className="game-wrapper">
+        {gameLogic(null, 5).choices.map((id) => {
+          const [data, setPhotosResponse] = useState(null);
+          return (
+            useEffect(() => {
+              getImages(Object.values(carImageData[id])[0])
+                .then((result) => {
+                  setPhotosResponse(result.response.urls.small);
+                })
+                .catch((error) => {
+                  console.log(error);
+                });
 
-      <Card
-        image="https://unsplash.com/photos/vMRXGZXll6Y/download?force=true"
-        name="Prosche 911 GT3RS"
-      />
+              return () => {};
+            }, []),
+            (
+              <Card
+                key={id}
+                image={data}
+                // clicked={card.clicked}
+              />
+            )
+          );
+        })}
+      </div>
     </main>
   );
 }
