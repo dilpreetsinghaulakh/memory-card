@@ -13,7 +13,6 @@
   background-color: #d2ecff; /* OG #80C27F */
   height: 100%;
   width: 100%;
-  /* inset: 0; */
   display: flex;
   flex-direction: column;
 }
@@ -34,6 +33,35 @@
   margin-top: auto;
 }
 
+.game-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:nth-child(1) {
+  transform: rotate(-25deg) translate(50px, 50px);
+}
+
+.card:nth-child(2) {
+  transform: rotate(-15deg) translate(40px, -30px);
+}
+
+.card:nth-child(3) {
+  transform: translateY(-60px);
+}
+
+.card:nth-child(4) {
+  transform: rotate(15deg) translate(-40px, -30px);
+}
+
+.card:nth-child(5) {
+  transform: rotate(25deg) translate(-50px, 50px);
+}
+
 @media (prefers-color-scheme: dark) {
   .game-wrapper-background {
     background-color: #000c14;
@@ -45,5 +73,40 @@
 
   .game-wrapper-background > .game-wrapper-ground {
     background-color: #234123;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .game-main-content {
+    width: calc(100% - 1rem);
+    margin: 1rem auto;
+    height: calc(100dvh - 1rem);
+    border-radius: 2.5rem;
+  }
+
+  .game-wrapper-background > .game-wrapper-sun {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    scale: 0.5;
+  }
+
+  .card:nth-child(1) {
+    transform: rotate(-15deg) translate(30px, 30px);
+  }
+
+  .card:nth-child(2) {
+    transform: rotate(-10deg) translate(20px, -15px);
+  }
+
+  .card:nth-child(3) {
+    transform: translateY(-40px);
+  }
+
+  .card:nth-child(4) {
+    transform: rotate(10deg) translate(-20px, -15px);
+  }
+
+  .card:nth-child(5) {
+    transform: rotate(15deg) translate(-30px, 30px);
   }
 }

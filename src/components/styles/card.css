@@ -1,6 +1,7 @@
 .card {
   aspect-ratio: 2/3;
   height: 300px;
+  min-width: 200px;
   background-color: #ffffff;
   padding: 0.5rem;
   border-radius: 1.25rem;
